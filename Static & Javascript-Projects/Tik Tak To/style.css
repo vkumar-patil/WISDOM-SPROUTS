@@ -1,0 +1,31 @@
+.btngroup{
+    height: 340px;
+    width: 350px;
+    margin-top: 50px;
+    margin-left: 400px;
+    background-color: aquamarine;
+    text-align: center;
+    display: grid;
+grid-template-columns: 100px 100px 100px ;
+grid-template-rows: 100px 100px 100px;
+column-gap: 5px;
+row-gap: 10px;
+
+}
+.box{
+    color: blue;
+    background-color: rgb(131, 218, 105);
+    height: 100px;
+    width: 100px;
+    margin: 2px;
+    padding: 5px;
+   font-size: 50px;
+
+}
+h2{
+    margin-top: 100px;
+    margin-left: 450px;
+    background-color: blueviolet;
+    width: 200px;
+    text-align: center;
+}

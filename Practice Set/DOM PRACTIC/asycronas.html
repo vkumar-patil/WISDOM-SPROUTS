@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="masseg"></p>
+  </body>
+  <script>
+    msg = document.getElementById("masseg");
+    function f1() {
+      setTimeout(function () {
+        msg.innerHTML += `<p>this is f1</P>`;
+      }, 2000);
+    }
+    f1();
+    function f2() {
+      setTimeout(function () {
+        msg.innerHTML += `
+<p>f2 start</p>`;
+
+        msg.innerHTML += `<p>f2 end</P>`;
+      }, 3000);
+    }
+    f2();
+
+    function f3() {
+      return new Promise(function (reject, resolv) {
+        setTimeout(function () {
+          msg.innerHTML += `<p> i am a f3 start</P>`;
+          msg.innerHTML += `<p> i am a f3 start</P>`;
+          reject();
+        }, 4000);
+      });
+    }
+
+    async function f4() {
+      setTimeout(function () {
+        msg.innerHTML += `<p> i am a f4 start</P>`;
+        f3();
+        msg.innerHTML += `<p> i am a f4 end</P>`;
+      }, 5000);
+    }
+    f4();
+  </script>
+</html>

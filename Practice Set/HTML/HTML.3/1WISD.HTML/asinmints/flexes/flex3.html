@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex with media</title>
+    <style>
+      .parrent {
+        display: flex;
+        border: solid #f5f1f1 1px;
+        height: 500px;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+      .header {
+        border: #f6f4f4 2px solid;
+        width: 100%;
+        height: 40px;
+
+        background-color: rgb(237, 87, 41);
+      }
+      .footer {
+        border: rgb(248, 243, 243) 2px solid;
+        width: 100%;
+        height: 40px;
+        background-color: rgb(35, 233, 111);
+      }
+      .asaid {
+        border: rgb(255, 252, 252) 2px solid;
+        width: 20%;
+        height: 420px;
+        background-color: rgb(247, 236, 115);
+      }
+      .asaid2 {
+        border: rgb(255, 252, 252) 2px solid;
+        width: 20%;
+        height: 420px;
+        background-color: rgb(226, 32, 216);
+      }
+
+      .content {
+        border: rgb(253, 250, 250) 2px solid;
+        width: 59%;
+        background-color: rgb(88, 172, 224);
+      }
+      @media only screen and (max-width: 500px) {
+        .parrent {
+          flex-wrap: wrap;
+          margin: 10px;
+        }
+        .header {
+          background-color: #f6f4f4;
+          display: none;
+        }
+        .asaid {
+          order: 2;
+          height: 60px;
+          flex: 1;
+        }
+        .asaid2 {
+          order: 3;
+          height: 60px;
+          flex: 1;
+        }
+
+        .content {
+          width: 100%;
+          height: 400px;
+
+          order: 1;
+        }
+        .footer {
+          order: 4;
+          width: 100%;
+          height: 60px;
+        }
+      }
+      @media only screen and (max-width: 360px) {
+        .footer,
+        .asaid2,
+        .asaid {
+          display: none;
+        }
+        .header {
+          display: block;
+          background-color: #f8a45f;
+          order: 1;
+          height: 70px;
+        }
+        .content {
+          order: 2;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="parrent">
+      <div class="header">Header</div>
+      <div class="asaid">Asaid1</div>
+      <div class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        repudiandae illum suscipit esse et, labore placeat optio dignissimos
+        corporis quia quisquam quasi dolorem ipsam mollitia. Iure ipsum
+        aspernatur labore quibusdam! Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Temporibus obcaecati labore, dolores reiciendis
+        suscipit atque earum alias minus tempora! Officiis iure sapiente autem,
+        impedit totam doloribus. Fugiat illo fugit placeat.
+      </div>
+      <div class="asaid2">Asaid2</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>

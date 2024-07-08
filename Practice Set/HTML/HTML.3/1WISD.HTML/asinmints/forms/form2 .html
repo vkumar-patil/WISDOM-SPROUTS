@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form>
+        <fieldset style="width: 40%">
+          <h1>My Feedback Form</h1>
+
+          <ul>
+            <li class="label">
+              <label for="name"> Name</label>
+              <input type="name" value="" id="name" name="name" />
+            </li>
+            <li class="label">
+              <label for="MAIL">Email</label>
+              <input type="email" value="" id="MAIL" name="MAIL" />
+            </li>
+            <li class="label">
+              <label for="passward">Passward</label>
+              <input type="password" value="" id="passward" name="passward" />
+            </li>
+
+            <li>please check the all emotions the apply to you:</li>
+            <div>
+              <li class="label">
+                <label for="checkbox">Agry</label>
+                <input
+                  type="checkbox"
+                  value=" Agry"
+                  id="checkbox"
+                  name="checkbox"
+                />
+              </li>
+              <li>
+                <label for="checkbox">sad</label>
+                <input
+                  type="checkbox"
+                  value=" sad"
+                  id="checkbox"
+                  name="checkbox"
+                />
+              </li>
+              <li class="label">
+                <label for="checkbox">happy</label>
+                <input
+                  type="checkbox"
+                  value=" happy"
+                  id="checkbox"
+                  name="checkbox"
+                />
+              </li>
+              <li class="label" style="margin: left 30px">
+                <label for="checkbox">Ambivalent</label>
+                <input
+                  type="checkbox"
+                  value=" Ambivalent"
+                  id="checkbox"
+                  name="checkbox"
+                />
+              </li>
+            </div>
+
+            <li>How satisfide were with our service ?</li>
+            <div>
+              <li class="label">
+                <label for="satisfide">satisfide</label>
+                <input type="radio" value=" satisfide" name="radio" />
+              </li>
+              <li class="label">
+                <label for="radio">very satisfide</label>
+                <input type="radio" value=" very satisfide" name="radio" />
+              </li>
+              <li class="label">
+                <label for="radio">Didnt care</label>
+                <input type="radio" value=" Didnt care" name="radio" />
+              </li>
+
+              <li class="label">
+                <label for="radio">Dsatisfide</label>
+                <input type="radio" value=" Dsatisfide" name="radio" />
+              </li>
+              <li class="label">
+                <label for="radio">very Dsatisfide</label>
+                <input type="radio" value=" very Dsatisfide" name="radio" />
+              </li>
+            </div>
+            <li>
+              <label for="Comments">Futher Comments</label>
+              <textarea
+                name=" Comments"
+                id="Comments"
+                cols="30"
+                rows="5"
+              ></textarea>
+            </li>
+            <br />
+            <li class="label">
+              <label for="file"> Bio photo</label>
+              <input type="file" id="file" name="file" />
+            </li>
+            <br />
+            <li>
+              <lable for="location">Location Visited</lable>
+              <select
+                name="location"
+                id="location"
+                multiple="1"
+                style="width: 80px; height: 20px"
+              >
+                <option value="nanded">nanded</option>
+                <option value="pune">pune</option>
+                <option value="mumbai">mumbai</option>
+                <option value="latur">latur</option>
+              </select>
+            </li>
+            <br />
+            <li>
+              <button>submit</button>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

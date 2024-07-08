@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gradiant</title>
+    <style>
+      .MAIN {
+        display: flex;
+      }
+      .contener {
+        height: 200px;
+        width: 200px;
+        border: solid black 1px;
+        background-image: linear-gradient(blue, green, red, yellow, pink);
+        transition: 5s;
+      }
+      .contener2 {
+        height: 200px;
+        width: 200px;
+        border: solid black 1px;
+        background-image: linear-gradient(
+          to right,
+          blue 2%,
+          red 40%,
+          pink,
+          yellow
+        );
+        transition: 5s;
+      }
+      .contener3 {
+        text-align: center;
+        height: 200px;
+        width: 200px;
+        border: solid black 1px;
+        background-image: repeating-radial-gradient(yellow, pink, blue);
+        border-radius: 100px;
+        transition: 5s;
+      }
+      .contener3:hover {
+        transform: rotate(360deg);
+      }
+      .contener2:hover {
+        transform: translate(700px);
+      }
+      .contener:hover {
+        transform: scaleX(10);
+      }
+      .contener4:hover {
+        transform: scale(10%);
+      }
+      .contener4 {
+        text-align: center;
+        height: 200px;
+        width: 200px;
+        border: solid black 1px;
+        background-image: conic-gradient(from 45deg, black, red, blue, yellow);
+        border-radius: 100px;
+        transition: 5s;
+      }
+    </style>
+  </head>
+  <body class="MAIN">
+    <div class="contener lgradiant"></div>
+    <br /><br />
+    <div class="contener2"></div>
+    <br /><br />
+    <div class="contener3">vijay.patil</div>
+    <br /><br />
+    <div class="contener4">vijay.patil</div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+.card{
+    margin: 10px;
+}
+.fst{
+    height: 100px;
+    width: 100px;
+}
+.maindiv{
+height: 400px;width: 400px;
+}
+.Btn{
+    background-color: rgb(222, 248, 138);
+    color: rgb(240, 12, 244);
+}

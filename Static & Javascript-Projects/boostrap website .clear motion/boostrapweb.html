@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .container {
+        position: relative;
+        width: 30%;
+        height: 30%;
+      }
+
+      .image {
+        opacity: 1;
+        display: block;
+        width: 50%;
+        height: 20%;
+        transition: 0.5s ease;
+        backface-visibility: hidden;
+      }
+
+      .middle {
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        width: 200px;
+        height: 300px;
+      }
+
+      .container:hover .image {
+        opacity: 0.5;
+      }
+
+      .container:hover .middle {
+        opacity: 1;
+      }
+
+      .text {
+        color: rgb(22, 17, 17);
+        font-size: 16px;
+      }
+      .footer {
+        background-color: black;
+        height: 1200px;
+        position: relative;
+      }
+      .footerlogo {
+        margin: 5px;
+      }
+      /* div :hover .head {
+        background-color: rgba(65, 59, 59, 0.5);
+        color: aliceblue;
+      } */
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light fixed-top">
+      <a class="navbar-brand p-0 m-0" href="#">
+        <img src="./img/logologo.png" width="200px" height="90px"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span id="crossmark" class="navbar-toggler-icon"></span>
+        <script></script>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >CMI <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Roadmotion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">press</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">clint login</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Careers</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Action 1</a>
+              <a class="dropdown-item" href="#">Action 2</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="text"
+            placeholder="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+    <br /><br /><br />
+    <div
+      id="carouselId"
+      class="carousel slide"
+      data-ride="carousel"
+      style="margin: 10px; margin-left: 0%"
+    >
+      <ol class="carousel-indicators">
+        <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselId" data-slide-to="1"></li>
+        <li data-target="#carouselId" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div
+          style="
+            background-image: url(./img/compony\ img.png);
+            background-size: cover;
+            height: 500px;
+            background-size: 1400px 500px;
+
+            position: relative;
+          "
+          class="carousel-item active mt-4 pt-5"
+        >
+          <div
+            class="text-center"
+            style="position: absolute; width: 300px; right: 10%"
+          >
+            <heding class="text-info">Its front </heding>
+            <h1 class="bold text-secondary">
+              Lorem ipsum dolor sit, amet consectetur .
+            </h1>
+            <p class="text-white">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, modi
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Repudiandae facilis nulla repellendus doloremque fugit at
+              perferendis repellat quos, quidem maxime eveniet itaque corporis
+              optio impedit vel doloribus debitis odit reprehenderit.
+            </p>
+          </div>
+          <!-- <img src="./img/Smooth-Driving-Startup-ClearMotion-Gets-115M.jpg" /> -->
+        </div>
+        <div
+          class="carousel-item mt-4 pt-5"
+          style="
+            background-image: url(./img/motion\ team..png);
+            height: 500px;
+            background-size: cover;
+            background-size: 1400px 500px;
+            position: relative;
+          "
+        >
+          <div
+            class="text-center"
+            style="position: absolute; width: 300px; right: 10%"
+          >
+            <heding class="text-primary">Careers </heding>
+            <h1 class="bold text-info">Lorem ipsum</h1>
+            <p class="text-white">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, modi
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Repudiandae facilis nulla repellendus doloremque fugit at
+              perferendis repellat quos, quidem maxime eveniet itaque corporis
+              optio impedit vel doloribus debitis odit reprehenderit.
+            </p>
+          </div>
+
+          <!-- <img src="./img/motion team..png" alt="Second slide" /> -->
+        </div>
+        <div
+          class="carousel-item mt-4 pt-5"
+          style="
+            background-image: url(./img/motion\ emg..png);
+            height: 500px;
+            background-size: cover;
+            background-size: 1200px 500px;
+            position: relative;
+          "
+        >
+          <div
+            class="text-center"
+            style="position: absolute; width: 300px; right: 10%"
+          >
+            <heding class="text-info">performenc </heding>
+            <h1 class="bold text-secondary">
+              Lorem ipsum dolor sit, amet consectetur.
+            </h1>
+            <p class="text-white">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, modi
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Repudiandae facilis nulla repellendus doloremque fugit at
+              perferendis repellat quos, quidem maxime eveniet itaque corporis
+              optio impedit vel doloribus debitis odit.
+            </p>
+          </div>
+
+          <!-- <img src="./img/motion team..png" alt="Third slide" /> -->
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselId"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselId"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="mt-5" style="margin-left: 320px; width: 600px">
+      <h2>Transform the quality of time in motion</h2>
+      <p>
+        ClearMotion drives comfort, productivity, performance and safety to new
+        limits for modern vehicle platforms
+      </p>
+    </div>
+    <br />
+    <section style="margin-left: 270px">
+      <video
+        width="600px"
+        height="400px"
+        loop
+        autoplay="autoplay"
+        muted
+        class="ml-5 p-0"
+      >
+        <source src="./img/ClearMotion Suspension.mp4" style="width: 600px" />
+      </video>
+    </section>
+
+    <div class="container" style="width: 600px">
+      <h2>ClearMotion digitizes the Z-dimension</h2>
+      <p class="p-large">
+        Much like noise cancellation, active motion control does the same for
+        unwanted vibrations that enter the vehicle platform. ClearMotion has
+        invested over a decade in perfecting the mechatronics and software that
+        can now afford extraordinary levels of differentiation through comfort,
+        performance and safety that were previously unachievable. In the future
+        this will unlock productivity and entertainment in the mobility space.
+        ClearMotion product portfolio is proactive motion control. Motion
+        control is provided by ClearMotion1 and Proactive is provided by
+        RoadMotion.
+      </p>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <div class="container" style="width: 600px; margin-left: 320">
+      <h2>A word from our leadership</h2>
+      <hr />
+      <p>
+        When others say impossible, all we see is possibility. We are a team
+        committed to transform the quality of time in motion unlocking comfort,
+        performance and safety that were previously unachievable. In the future
+        this will unlock productivity and entertainment in the mobility space.
+        In every role, and at all levels of our organization, this requires a
+        combination of pioneering spirit, collaborative approach, resilience and
+        a desire to be extraordinary. We’re here to change the ride. Interested
+        in joining us? We’d love to hear from you.
+      </p>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container m-0">
+          <span class="text" style="position: absolute"
+            >Christian Stainmann</span
+          >
+          <span class="text-info" style="position: absolute; margin-top: 15px"
+            >ceo</span
+          >
+
+          <img
+            src="./img/chairman.....png"
+            style="width: 100%; height: 380px"
+            class="image"
+          />
+
+          <div class="middle">
+            <div class="text">
+              <p class="text" style="font-family: Arial, Helvetica, sans-serif">
+                As CEO, Christian’s focus is on industrialization of
+                ClearMotion’s first product, efficiently scaling the
+                organization, and top-line growth. Christian has over 21 years
+                of experience working across numerous product lines, including
+                electric powertrain, body
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container m-0">
+          <span class="text" style="position: absolute"
+            >Christian Stainmann</span
+          >
+          <span class="text-info" style="position: absolute; margin-top: 15px"
+            >ceo</span
+          >
+
+          <img
+            src="./img/chairman.....png"
+            style="width: 100%; height: 380px"
+            class="image"
+          />
+
+          <div class="middle">
+            <div class="text">
+              <p class="text" style="font-family: Arial, Helvetica, sans-serif">
+                Zack Anderson is the Chief Technology Officer and co-founder of
+                ClearMotion. As CTO, Zack oversees the confluence of mechanical,
+                electrical and controls engineering for ClearMotion’s global
+                customers.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container m-0">
+          <span class="text" style="position: absolute"
+            >Christian Stainmann</span
+          >
+          <span class="text-info" style="position: absolute; margin-top: 15px"
+            >ceo</span
+          >
+
+          <img
+            src="./img/chairman.....png"
+            style="width: 100%; height: 380px"
+            class="image"
+          />
+
+          <div class="middle">
+            <div class="text">
+              <p class="text" style="font-family: Arial, Helvetica, sans-serif">
+                Kevin Woodward is the VP of Sales overseeing our OEM and Tier 1
+                customer relationships.&nbsp; He leads the team that distills
+                the voice of the customer and the market to drive our product
+                needs. Kevin has over 15 years of experience in the automotive
+                chassis space leading global teams, building relationships in
+                the value stream and growing business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container m-0">
+          <span class="text" style="position: absolute"
+            >Christian Stainmann</span
+          >
+          <span class="text-info" style="position: absolute; margin-top: 15px"
+            >ceo</span
+          >
+
+          <img
+            src="./img/chairman.....png"
+            style="width: 100%; height: 380px"
+            class="image"
+          />
+
+          <div class="middle">
+            <div class="text">
+              <p class="text" style="font-family: Arial, Helvetica, sans-serif">
+                Lorna Mayer is the VP of HR / Finance at ClearMotion. At Joost
+                she worked closely with the Skype co-founders to grow the
+                company from 12 to 250 employees over 4 locations in 18 months,
+                bringing internet streaming television from an idea to reality.
+                She has a history of implementing and refining
+                policies/procedures to ensure efficiency, compliance, and
+                scalability. She has earned a reputation for aligning ideas,
+                people and technology in the pursuit of ambitious goals
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container m-0">
+          <span class="text" style="position: absolute"
+            >Christian Stainmann</span
+          >
+          <span class="text-info" style="position: absolute; margin-top: 15px"
+            >ceo</span
+          >
+
+          <img
+            src="./img/chairman.....png"
+            style="width: 100%; height: 380px"
+            class="image"
+          />
+
+          <div class="middle">
+            <div class="text">
+              <p class="text" style="font-family: Arial, Helvetica, sans-serif">
+                Michael leads ClearMotion’s Global Business Operations
+                (Purchasing, Quality and Supply Chain) teams having more than 22
+                years of OEM experience.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container m-0">
+          <span class="text" style="position: absolute"
+            >Christian Stainmann</span
+          >
+          <span class="text-info" style="position: absolute; margin-top: 15px"
+            >ceo</span
+          >
+
+          <img
+            src="./img/chairman.....png"
+            style="width: 100%; height: 380px"
+            class="image"
+          />
+
+          <div class="middle">
+            <div class="text">
+              <p class="text" style="font-family: Arial, Helvetica, sans-serif">
+                Before joining ClearMotion, Michael headed up the Purchasing
+                department for JLR’s Joint venture in China, with responsibility
+                of managing the business’ ¥7.2bn RMB annual spend. He was able
+                to reduce the business’s material cost base by 4.6%, generating
+                year on year savings of over ¥231m RMB per annum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container m-0">
+          <span class="text" style="position: absolute"
+            >Christian Stainmann</span
+          >
+          <span class="text-info" style="position: absolute; margin-top: 15px"
+            >ceo</span
+          >
+
+          <img src="" style="width: 100%; height: 380px" class="image" />
+
+          <div class="middle">
+            <div class="text">
+              <p class="text" style="font-family: Arial, Helvetica, sans-serif">
+                Joe Belter serves as director of the full active actuator team
+                and is responsible for delivering the hardware into production.
+                He has been a key engineer within ClearMotion, responsible for
+                many of the enabling innovations since the early days of
+                ClearMotion.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Our locations</h2>
+    <p>
+      Global industry requires a comprehensive solution. ClearMotion has
+      outreach around the world to better serve our customers.
+    </p>
+    <br />
+    <br />
+    <br />
+
+    <section class="footer" style="position: relative; overflow: visible">
+      <div class="container-fluid mx-0">
+        <div class="row">
+          <div
+            class="col-6"
+            style="position: absolute; top: -55px; left: 10%; float: left"
+          >
+            <img src="./img/cm1-system2.png" style="width: 400px" />
+          </div>
+          <div
+            class="col-6 text-white"
+            style="position: absolute; right: 5%; top: 20%"
+          >
+            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+            <br />
+            <br />
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Accusantium quisquam autem explicabo in ut totam repudiandae. Odit
+              nulla molestias deleniti cumque sunt maxime temporibus placeat,
+              odio praesentium minima accusantium aliquid!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="text-white"
+        style="position: absolute; bottom: 30%; left: 20%; right: 40%"
+      >
+        <h1>Get in tuch</h1>
+        <br />
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+          nesciunt, doloribus officiis totam inventore laboriosam quam.
+          Voluptatem temporibus accusamus est quos iure, reiciendis laudantium
+          cumque, consequatur iusto delectus dolores dolorum.
+        </p>
+        <button
+          class="text-larg"
+          style="background-color: aquamarine; border-radius: 30px"
+        >
+          Get in tuch
+        </button>
+        <div
+          class="container"
+          style="
+            width: 340px;
+            height: 60px;
+            margin-top: 50px;
+            margin-right: 300px;
+          "
+        >
+          <span class="footerlogo">cm1</span
+          ><span class="footerlogo">Roadmotion</span>
+          <span class="footerlogo">careears</span
+          ><span class="footerlogo"
+            ><i class="fa-solid fa-xmark" style="color: #63e6be"></i></span
+          ><span class="footerlogo"
+            ><i class="fa-brands fa-instagram" style="color: #63e6be"></i></span
+          ><span class="footerlogo"
+            ><i class="fa-brands fa-linkedin" style="color: #63e6be"></i></span
+          ><span class="footerlogo"
+            ><i class="fa-brands fa-youtube" style="color: #63e6be"></i
+          ></span>
+        </div>
+        <span
+          ><i class="fa-regular fa-copyright"></i>2024 ClearMotion,inc.</span
+        >
+      </div>
+      <div style="position: absolute; bottom: 10%; right: 5%">
+        <img src="./img/image001logo.png" style="height: 40px; width: 400px" />
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

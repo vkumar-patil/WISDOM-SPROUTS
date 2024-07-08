@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .name {
+        text-shadow: -1px 1px 2px rgb(230, 147, 32), -1px 1px red;
+      }
+      .BRAND {
+        text-shadow: 1px 1px 3px yellow, 2px 2px 2px red;
+      }
+      .img {
+        box-shadow: 2px 2px 2px 1px red, 1px 1px 1px 2px yellow,
+          -1px -1px 1px 1px palevioletred;
+      }
+      .BUY {
+        height: 40px;
+        width: 70px;
+        animation: BUY 2s linear 5s infinite;
+        background-color: aquamarine;
+        text-shadow: 2px 2px 2px red;
+      }
+      @keyframes BUY {
+        0% {
+          background-color: rgb(121, 197, 34);
+          transform: scale(50%);
+        }
+        25% {
+          background-color: rgb(255, 127, 200);
+          transform: scale(60%);
+        }
+        50% {
+          background-color: rgb(69, 236, 236);
+          transform: scale(70%);
+        }
+        75% {
+          color: rgb(226, 226, 30);
+          transform: scale(80%);
+          border-radius: 30px;
+        }
+        100% {
+          color: bisque;
+          transform: scale(100%);
+          background-color: rgb(162, 247, 162);
+          border-radius: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shadow">
+      <h3 class="name">Vijay Sale</h3>
+      <label for="img" class="BRAND">SAMSUNG S1 VIZIO</label>
+      <img src="./LED TV.png" id="img" class="img" />
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis
+        suscipit eaque molestias at illum, voluptate eius commodi similique qui?
+        Laborum doloribus tempora commodi eius accusantium vero similique
+        ratione culpa cum.
+      </p>
+      <button class="BUY">Buy Now</button>
+    </div>
+  </body>
+</html>

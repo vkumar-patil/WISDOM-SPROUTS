@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform</title>
+    <style>
+      .rotate {
+        width: 200px;
+        height: 200px;
+        border: solid black 2px;
+        background-color: blueviolet;
+        margin: 10px;
+        transition: 5s;
+      }
+      .ltranslate:hover {
+        transform: translate(300px, 200px);
+      }
+      .rotate:hover {
+        transform: rotate(360deg);
+      }
+      .scale:hover {
+        transform: scale(200%);
+      }
+      .scale {
+        margin: 20px;
+        width: 200px;
+        height: 200px;
+        border: solid black 1px;
+        background-color: aquamarine;
+        transition: 5s;
+      }
+      .translate {
+        width: 200px;
+        height: 200px;
+        border: solid black 2px;
+        background-color: rgb(216, 239, 143);
+        margin: 10px;
+        transition: 5s;
+      }
+      .contener {
+        display: flex;
+        align-content: center;
+      }
+    </style>
+  </head>
+  <body class="contener">
+    <div class="translate ltranslate">vijay</div>
+    <div class="rotate">vijay</div>
+    <br />
+    <div class="scale">vijay</div>
+  </body>
+</html>

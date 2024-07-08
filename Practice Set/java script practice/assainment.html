@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Username Validation Form</title>
+    <style>
+      .error-message {
+        color: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Username Validation Form</h2>
+
+    <form id="usernameForm" onsubmit="return validateForm()">
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        required
+        pattern="[a-zA-Z0-9]+"
+        title="Username can only contain letters and numbers"
+      />
+      <span id="usernameError" class="error-message"
+        >Please fill out the username</span
+      >
+      <span id="usernameLengthError" class="error-message"
+        >Username must be at least 7 characters long</span
+      ><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      function validateForm() {
+        var usernameInput = document.getElementById("username").value;
+        var usernameError = document.getElementById("usernameError");
+        var usernameLengthError = document.getElementById(
+          "usernameLengthError"
+        );
+
+        if (usernameInput.trim() === "") {
+          usernameError.textContent = "Please fill out the username";
+          usernameError.style.display = "inline";
+          return false;
+        } else if (usernameInput.length < 7) {
+          usernameError.style.display = "none";
+          usernameLengthError.style.display = "inline";
+          return false;
+        } else {
+          usernameError.style.display = "none";
+          usernameLengthError.style.display = "none";
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>

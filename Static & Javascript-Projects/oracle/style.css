@@ -1,0 +1,7 @@
+body{
+    background-image: url(./img/baground\ img.jpg);
+}
+ul{
+    border-color: aqua 2px;
+    box-shadow: blue 1px 1px 1px 1px;
+}

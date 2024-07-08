@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .contener {
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px 100px 100px;
+        background-color: antiquewhite;
+        gap: 3px;
+      }
+      .chery {
+        width: 40px;
+        height: 40px;
+      }
+      .pulms {
+        width: 40px;
+        height: 40px;
+      }
+      .watermelon {
+        width: 40px;
+        height: 40px;
+        grid-column: 3/6;
+        grid-row: 1/3;
+      }
+      .orenge {
+        width: 40px;
+        height: 40px;
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
+      .papiya {
+        width: 40px;
+        height: 40px;
+        grid-column: 1/3;
+        grid-row: 3/4;
+      }
+      .painapple {
+        width: 40px;
+        height: 40px;
+        grid-column: 3/5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contener" style="height: 500px; margin-top: 30px">
+      <div class="chery">
+        <img
+          src="./stobery.png"
+          alt="stobery"
+          style="width: 100px; height: 100px"
+        />
+      </div>
+      <div class="pulms">
+        <img
+          src="./pulms.png"
+          alt="pulms"
+          style="width: 100px; height: 100px"
+        />
+      </div>
+      <div class="watermelon">
+        <img src="./watermelon.png" style="width: 200px; height: 200px" />
+      </div>
+      <div class="orenge">
+        <img src="./orengpic.png" style="width: 200px; height: 100px" />
+      </div>
+      <div class="papiya">
+        <img src="./papiya img.png" style="width: 200px; height: 100px" />
+      </div>
+      <div class="painappel">
+        <img src="./fanas.png" style="width: 200px; height: 100px" />
+      </div>
+    </div>
+  </body>
+</html>

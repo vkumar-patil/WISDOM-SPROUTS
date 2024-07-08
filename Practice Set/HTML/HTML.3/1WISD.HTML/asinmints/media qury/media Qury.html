@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      img {
+        width: 200px;
+        height: 220px;
+        float: left;
+        border-radius: 50px;
+        margin-bottom: 10px;
+      }
+      div.para {
+        float: right;
+        background-color: red;
+        margin-left: 20px;
+      }
+      .parrent {
+        width: 800px;
+        height: 220px;
+        padding-top: 10px;
+        padding-left: 10px;
+      }
+      .box {
+        width: 100px;
+        height: 40px;
+        background-color: blueviolet;
+        border: solid 2px black;
+      }
+      @media only screen and (max-width: 500px) {
+        body {
+          background-color: blue;
+        }
+        div p {
+          background-color: brown;
+          color: aqua;
+          display: none;
+        }
+        body > .parrent {
+          background-color: rgb(199, 245, 199);
+        }
+        .box {
+          display: inline-flex;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="parrent" style="border: solid black 2px">
+      <img src="./spacemachine.jpg" />
+      <p class="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, unde
+        deleniti commodi ea sed nam harum itaque exercitationem illum obcaecati
+        alias reiciendis suscipit aut. Pariatur delectus numquam sapiente iste
+        optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+        aspernatur cum provident eum recusandae vero velit veritatis aut est
+        libero molestias id vel, asperiores, accusamus maiores illo quidem culpa
+        fugit?
+      </p>
+    </div>
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+  </body>
+</html>

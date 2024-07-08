@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body>
+  <h3 style="text-align: center; text-decoration: underline">
+    Student Registration Form
+  </h3>
+  <form
+    action=""
+    style="
+      width: 500px; height: 750px;
+      margin-left: 380px;
+      border: dashed 3px black;
+      background-color: rgb(217, 135, 241); color: rgb(246, 250, 250);
+    "
+  >
+    <table>
+      <!-- अन्य फॉर्म फील्ड्स -->
+      <tr>
+        <td><label for="first-name">First Name</label></td>
+        <td>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            placeholder="First Name"
+            pattern=".{0,50}"
+          />(max 50 characters Allowed)
+        </td>
+      </tr>
+      <!-- अन्य फॉर्म फील्ड्स -->
+    </table>
+  </form>
+</body>
+</html>

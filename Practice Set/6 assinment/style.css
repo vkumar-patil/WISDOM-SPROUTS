@@ -1,0 +1,25 @@
+.Social li {
+    
+    margin: 20px;
+    background-color: rgb(204, 216, 216);
+    width: 60px;
+    height: 60px;
+    list-style: none;
+    border-radius: 50px;
+    position: relative;
+
+
+    
+}
+li i{
+    margin-left: 10px;
+    margin-top: 10px;
+    position: absolute ;
+    top: 30%;
+    right: 24%;
+    color: blue;
+}
+.Social{
+    margin-top: 50px;
+
+}

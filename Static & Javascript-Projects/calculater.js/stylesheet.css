@@ -1,0 +1,23 @@
+button{
+    height: 80px; width: 80px;border-radius: 20px;font-size: larger;
+}
+#displaybox{
+    height: 30px;width: 320px;padding: 12px;margin-left: 3px;margin: 4px;background-color: rgb(234, 231, 226);
+    border-radius: 20px;font-size: 30px ;text-shadow: rgb(21, 21, 21) 1px 2px 2px; border: solid pink 3px;
+}
+button:hover{
+    transform: scale(99%);
+}
+button:active{
+    background-color: rgb(110, 131, 127);font-size: 30px;color: aliceblue;border-color: aqua;
+}
+
+.calculator{ background-color: black;border-radius: 20px;
+    border: solid red 3px;width: 357px;height: 420px;margin: auto;padding: 20px;box-shadow:greenyellow 4px 2px 3px,red 4px 2px 3px,greenyellow -3px 2px 3px,red -4px 2px 3px,greenyellow -2px -2px 2px;text-align: center;
+}
+.heading{
+    margin-left: 480px;text-shadow: red 2px 2px 2px ;
+}
+#display{
+    border-radius: 10px;
+}

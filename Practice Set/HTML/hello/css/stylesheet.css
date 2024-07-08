@@ -1,0 +1,53 @@
+dl{ background-color: rgb(244, 117, 232);}
+
+ul{ color: #f18323; list-style-type:circle;}
+list{ color: blueviolet;}
+dl{text-align: center;}
+ol{padding:2cap;
+    text-decoration:lightcoral;
+}
+.bigest1{ text-decoration:underline}
+.wrong1{
+padding:none; border: 40; border-color: aqua; margin: 20px; 
+}
+dt{
+    padding: 0%;
+}
+h2{ background-color: aqua; float: inherit;display: inline;}
+h5{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#mack1{background-color: #2a23f1;display: inline;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h2{ 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{ background-color: bisque;}
+mack1{
+    border-radius: 50px  20px;
+}
+dt{
+    border-radius: 100px;
+}
+h2{
+    border-radius: 50px;
+}
+a :link{color: #f18323;
+    
+}
+a :visited{
+ color: aqua;
+}
+a :hover{
+    color: rgb(241, 232, 49);
+}
+a :active{
+    color: #e731a2;
+}
+UL{
+    background-color: #f1ade9;
+}
+SOFT{
+    background-color: #f1ade9;
+}

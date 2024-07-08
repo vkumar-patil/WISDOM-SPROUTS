@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        body{
+            background-color: blanchedalmond;
+        }
+        body>form>input>.name{
+             background-color: rgb(255, 0, 106);
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset> 
+            <legend> persnol information</legend>
+        <label for="name">NAME</label>
+        <input type="text"  value="" id="name" name="name"/><br><br>
+        <label for="LAST NAME">LAST NAME</label>
+        <input type="text"  value="" id="LAST NAME" name="LAST NAME"/><br><br>
+
+        <label for="PHONE">PHONE</label>
+        <input type="text"  value="" id="PHONE" name="PHONE"/><br><br>
+        <label for="MAIL">MAIL</label>
+        <input type="email"  value="" id="MAIL" name="MAIL" required pattern="(1@._)" {10}/><br><BR>
+        <label  for="ADRESS">ADRESS</label>
+        <input type="Mac Adress" value="" id="ADRESS" name="ADRESS" /><br><br>
+        <label  for="DATE">DATE</label>
+        <input type="date" value="" id="date" name="date" min="20/03/2024"/><br><br>
+        <label  for="IDPRUF">ADHAR CARD</label>
+<input type="file" value="" id="IDPRUF" name="IDPRUF"><BR><br>
+        <label for="LOG">LOG ID</label>
+        <input type="ID" value="" id="LOG" name="LOG"pattern(A)><br><br>
+        <label for="passward">passward</label>
+        <input type="password" value=""id=" passward" name="passward"><BR><br>
+            <label for="range">range</label>
+        <input type="range" value=""id=" RANGE" name="range" ><BR><br>
+            <label for="color">select color</label>
+        <input type="color" value=""id="color" name="color"><BR><br>
+            <label for="action" > action</label>
+        <input type="action" value=""id="action" name="action"><BR><br>
+            <label for="remarks">Remarks</label>
+           <div><textarea  id="remarks" name="remarks" rows="10" cols="30"> remark</textarea></div>
+        <input type="submit"/>
+    </fieldset>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,143 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Address book</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <script src="./s.js"></script>
+    <link rel="stylesheet" href="./stylsheet.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        welcome to Codepen.<span class="upper-case">io</span> Address Book
+      </h1>
+    </header>
+
+    <section class="main-section">
+      <h2>Contact Form</h2>
+      <form action="#" class="form">
+        <div class="input-container">
+          <i class="fa fa-user icon"></i>
+          <input
+            class="input-field"
+            type="text"
+            placeholder="Surname Firstname Othername"
+            name="usrnm"
+          />
+        </div>
+
+        <div class="input-container">
+          <i class="fa fa-envelope icon"></i>
+          <input
+            class="input-field"
+            type="text"
+            placeholder="Email"
+            name="email"
+          />
+        </div>
+
+        <div class="input-container">
+          <i class="fa fa-phone icon"></i>
+          <input
+            class="input-field"
+            type="tel"
+            placeholder="Phone Number"
+            name="psw"
+          />
+        </div>
+
+        <div class="input-container">
+          <i class="fa fa-users icon"></i>
+          <input
+            class="input-field"
+            type="number"
+            placeholder="Number of Family"
+            name="psw"
+          />
+        </div>
+
+        <div class="input-container">
+          <i class="fa fa-people-carry icon"></i>
+          <input
+            class="input-field"
+            type="text"
+            placeholder="List of Friends"
+            name="psw"
+          />
+        </div>
+
+        <div class="input-container">
+          <i class="fa fa-map-marker icon"></i>
+          <textarea name="comment" class="input-field" form="usrform">
+Enter Address here...</textarea
+          >
+        </div>
+
+        <button type="submit" class="btn">Add</button>
+      </form>
+    </section>
+
+    <div class="#">
+      <h2>List of Contact</h2>
+      <input
+        type="text"
+        id="myInput"
+        onkeyup="myFunction()"
+        placeholder="Search for names.."
+      />
+
+      <table id="myTable">
+        <tr class="header">
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Number of Family</th>
+          <th>List of Friends</th>
+          <th>Address</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Germany</td>
+          <td>Alfreds Futterkiste</td>
+          <td>Germany</td>
+          <td>Alfreds Futterkiste</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Berglunds snabbkop</td>
+          <td>Sweden</td>
+          <td>Berglunds snabbkop</td>
+          <td>Sweden</td>
+          <td>Berglunds snabbkop</td>
+          <td>Sweden</td>
+        </tr>
+        <tr>
+          <td>Island Trading</td>
+          <td>UK</td>
+          <td>Island Trading</td>
+          <td>UK</td>
+          <td>Island Trading</td>
+          <td>UK</td>
+        </tr>
+        <tr>
+          <td>Koniglich Essen</td>
+          <td>Germany</td>
+          <td>Koniglich Essen</td>
+          <td>Germany</td>
+          <td>Koniglich Essen</td>
+          <td>Germany</td>
+        </tr>
+      </table>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

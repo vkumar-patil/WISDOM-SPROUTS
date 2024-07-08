@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANIMATION</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .animation {
+        height: 200px;
+        width: 200px;
+        animation: heart linear 2s infinite;
+      }
+      @keyframes heart {
+        0% {
+          transform: scale(50%);
+        }
+        25% {
+          transform: scale(100%);
+        }
+        50% {
+          transform: scale(130%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="animation">
+      <i
+        class="fa-solid fa-heart"
+        style="
+          font-size: 200px;
+          margin: 30px;
+
+          color: rgb(220, 86, 37);
+        "
+      ></i>
+    </div>
+  </body>
+</html>

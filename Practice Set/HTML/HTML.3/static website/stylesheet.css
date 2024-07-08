@@ -1,0 +1,41 @@
+.nav {
+    display: inline-block;margin: 0%;padding: 0%;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(242, 246, 248);position: fixed;
+  }
+  .body{padding: 0%;margin: 0%;border: 0%;}
+  .logo {
+    width: 90px;
+    height: 40px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .option {
+    display: inline;
+    margin: 5px;
+  }
+  .logo2 {
+    display: inline;
+  }
+
+
+
+.nav a:hover {
+    color: #f341fd;
+  }
+  .nav a:active {
+    color: #ceec5f;
+  }
+  #sign:active{background-color: aquamarine;}
+  #log:active{background-color: aquamarine;transform: scale(70%);}
+  
+   #log {
+    background-color: #5779f4; color: rgb(252, 247, 247);
+    border-radius: 5px;
+  }
+  #sign{background-color: rgb(182, 120, 193);border-radius: 5px; color: rgb(25, 26, 27);}
+  .nav img{border-radius: 5px;}
+  a {
+    text-decoration: none;}

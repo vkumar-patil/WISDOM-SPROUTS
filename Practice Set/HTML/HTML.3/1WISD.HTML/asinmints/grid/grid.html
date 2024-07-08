@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .contener {
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px 100px;
+        gap: 10px;
+
+        background-color: aqua;
+      }
+      .item1 {
+        grid-column: 1/5;
+      }
+      .item2 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+      .item3 {
+        grid-row: 2/3;
+        grid-column: 2/4;
+      }
+      .item4 {
+        grid-row: 2/3;
+        grid-column: 4/5;
+      }
+      .item5 {
+        grid-column: 1/5;
+        grid-row: 3/4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contener" style="height: 500px">
+      <div
+        class="item1"
+        style="grid-template-areas: h; background-color: rgb(230, 179, 68)"
+      >
+        h
+      </div>
+      <div
+        class="item2"
+        style="grid-template-areas: as; background-color: antiquewhite"
+      >
+        as
+      </div>
+
+      <div
+        class="item3"
+        style="grid-template-areas: se; background-color: aquamarine"
+      >
+        se
+      </div>
+      <div
+        class="item4"
+        style="grid-template-areas: as2; background-color: brown"
+      >
+        as2
+      </div>
+      <div
+        class="item5"
+        style="grid-template-areas: f; background-color: rgb(234, 222, 92)"
+      >
+        f
+      </div>
+    </div>
+  </body>
+</html>

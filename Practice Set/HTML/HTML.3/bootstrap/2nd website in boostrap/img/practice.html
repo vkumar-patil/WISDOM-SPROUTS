@@ -1,0 +1,67 @@
+!
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .container {
+        position: relative;
+        width: 50%;
+      }
+
+      .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: 0.5s ease;
+        backface-visibility: hidden;
+      }
+
+      .middle {
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .container:hover .image {
+        opacity: 0.5;
+      }
+
+      .container:hover .middle {
+        opacity: 1;
+      }
+
+      .text {
+        color: rgb(16, 14, 14);
+        font-size: 16px;
+        padding: 16px 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Opacity with Box</h2>
+    <p>Hover over the image to see the effect.</p>
+
+    <div class="container">
+      <img
+        src="./img/chairman.....png"
+        alt="Avatar"
+        class="image"
+        style="width: 100%"
+      />
+      <div class="middle">
+        <div class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+          neque dolores molestiae totam adipisci. Vitae, atque error? Ullam
+          rerum eligendi animi, ratione quidem alias blanditiis aliquam. Minima
+          laudantium libero mollitia.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
