@@ -22,6 +22,7 @@ productids.forEach(async (productID) => {
   newdiv.addEventListener("click", (e) => {
     if (e.target.classList.contains("Btn")) {
       const modelContain = document.createElement("div");
+
       modelContain.innerHTML = `<img src="${data.image}">
                    <h6>${data.title}</h6>
                    <p>Description:-${data.description}</p>
@@ -30,7 +31,7 @@ productids.forEach(async (productID) => {
 
 `;
 
-      modelId.appendChild(modelContain);
+main.appendChild(modelContain);
       console.log(modelId);
     }
   });
