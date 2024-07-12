@@ -1,7 +1,7 @@
 const productids = [1, 2, 3, 4, 5];
 const main = document.getElementById("main");
-const BBtn = document.getElementById("BBtn");
-const modelId = document.getElementById("modelId");
+const Btn = document.querySelector(".Btn");
+
 productids.forEach(async (productID) => {
   const response = await fetch(
     `https://fakestoreapi.com/products/${productID}`
@@ -18,21 +18,26 @@ productids.forEach(async (productID) => {
   newdiv.querySelector("button").classList.add("Btn");
   newdiv.querySelector("img").classList.add("fst");
   main.appendChild(newdiv);
-
-  newdiv.addEventListener("click", (e) => {
-    if (e.target.classList.contains("Btn")) {
+  Btn.addEventListener("click", (e) => {
+    if (e) {
       const modelContain = document.createElement("div");
-
-      modelContain.innerHTML = `<img src="${data.image}">
-                   <h6>${data.title}</h6>
-                   <p>Description:-${data.description}</p>
-                   <p><span>&#8377 ${data.price}</span><span> <span>&bigstar;</span>${data.rating.rate}</span></p> 
-                   
-
+      modelContain.innerHTML = `              <div id="myModal" class="modal">
+<div class="modal-content">
+  <span >&times;</span>
+  <img src="${data.image}" alt="Product Image" >
+  <h6 >${data.title}</h6>
+  <p >${data.description}</p>
+  <p><span > ${data.price}</span><span> <span>&bigstar;</span><span >${data.rating.rate}</span></span></p>
+</div>
+</div>
 `;
-
-main.appendChild(modelContain);
-      console.log(modelId);
+      modelContain.querySelector("div").classList.add("modal");
+      modelContain.querySelector("span").classList.add("close");
+      modelContain.querySelector("img").classList.add("secound");
+      const modal = document.querySelector(".modal");
+      //main.style.display = "none";
+      modal.appendChild(modelContain);
+      console.log(modelIId);
     }
   });
 });

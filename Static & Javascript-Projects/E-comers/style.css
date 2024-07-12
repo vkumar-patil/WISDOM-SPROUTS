@@ -12,3 +12,11 @@ height: 400px;width: 400px;
     background-color: rgb(222, 248, 138);
     color: rgb(240, 12, 244);
 }
+#viw{
+    overlay: auto;
+    z-index: 1;
+}
+.secound{
+    height: 400px;
+    width: 400px;
+}
