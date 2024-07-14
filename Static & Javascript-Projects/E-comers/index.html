@@ -69,31 +69,34 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             Search
           </button>
-          <button
-            type="button"
-            class="btn btn-primary btn-md"
-            data-toggle="modal"
-            data-target="#modelId"
-            style="margin-left: 10px"
-          >
-            Cart
-            <span>1</span>
-          </button>
-          <button
-            type="button"
-            class="btn btn-primary btn-md"
-            data-toggle="modal"
-            data-target="#modelId"
-            style="margin-left: 10px"
-          >
-            Wishlist
-            <span>1</span>
-          </button>
         </form>
       </div>
     </nav>
+
+    <!-- this is See More Button Modal -->
     <div id="main"></div>
+    <!-- HTML -->
+
+    <!-- Modal Structure -->
+    <div id="modelId" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <img src="" alt="Product Image" id="productImage" />
+        <h6 id="productTitle"></h6>
+        <p id="productDescription"></p>
+        <p>
+          <span id="productPrice"></span
+          ><span> <span>★</span><span id="productRating"></span></span>
+        </p>
+        <button class="buy" id="buy">Buy</button
+        ><button class="Addcart" id="Addcart">Add Cart</button>
+      </div>
+    </div>
+    <!-- this modal body is th cart and wishlistButton trigger modal -->
+    <!-- Button trigger modal -->
+
     <script src="./script.js"></script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

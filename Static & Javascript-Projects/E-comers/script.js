@@ -1,6 +1,12 @@
 const productids = [1, 2, 3, 4, 5];
 const main = document.getElementById("main");
-const Btn = document.querySelector(".Btn");
+const modal = document.getElementById("modelId");
+const productImage = document.getElementById("productImage");
+const productTitle = document.getElementById("productTitle");
+const productDescription = document.getElementById("productDescription");
+const productPrice = document.getElementById("productPrice");
+const productRating = document.getElementById("productRating");
+const span = document.querySelector(".close");
 
 productids.forEach(async (productID) => {
   const response = await fetch(
@@ -13,31 +19,21 @@ productids.forEach(async (productID) => {
   newdiv.id = `product-${productID}`;
   newdiv.innerHTML = `<img src="${data.image}">
                          <h6>${data.title}</h6>
-                        <button>See More</button>
+                        <button class="Bttn">See More</button>
                          `;
-  newdiv.querySelector("button").classList.add("Btn");
+
   newdiv.querySelector("img").classList.add("fst");
   main.appendChild(newdiv);
-  Btn.addEventListener("click", (e) => {
-    if (e) {
-      const modelContain = document.createElement("div");
-      modelContain.innerHTML = `              <div id="myModal" class="modal">
-<div class="modal-content">
-  <span >&times;</span>
-  <img src="${data.image}" alt="Product Image" >
-  <h6 >${data.title}</h6>
-  <p >${data.description}</p>
-  <p><span > ${data.price}</span><span> <span>&bigstar;</span><span >${data.rating.rate}</span></span></p>
-</div>
-</div>
-`;
-      modelContain.querySelector("div").classList.add("modal");
-      modelContain.querySelector("span").classList.add("close");
-      modelContain.querySelector("img").classList.add("secound");
-      const modal = document.querySelector(".modal");
-      //main.style.display = "none";
-      modal.appendChild(modelContain);
-      console.log(modelIId);
-    }
+  newdiv.querySelector(".Bttn").addEventListener("click", () => {
+    productImage.src = data.image;
+    productTitle.textContent = data.title;
+    productDescription.textContent = data.description;
+    productPrice.textContent = data.price;
+    productRating.textContent = data.rating.rate;
+    modal.style.display = "block";
+
+    span.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
   });
 });
