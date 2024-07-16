@@ -1,4 +1,12 @@
 const productids = [1, 2, 3, 4, 5];
+// cart modal id
+const Cart = document.getElementById("Cart");
+const modall = document.getElementById("modelIdd");
+const ProductTitle = document.getElementById("ProductTitle");
+const ProductPrice = document.getElementById("ProductPrice");
+const Span = document.querySelector(".Close");
+
+//product modal id
 const main = document.getElementById("main");
 const modal = document.getElementById("modelId");
 const productImage = document.getElementById("productImage");
@@ -34,6 +42,15 @@ productids.forEach(async (productID) => {
 
     span.addEventListener("click", () => {
       modal.style.display = "none";
+    });
+  });
+  Cart.addEventListener("click", () => {
+    const cartlist = document.createElement("ul");
+    cartlist.innerHTML = `<li>${data.title}</li>`;
+    ProductTitle.appendChild(cartlist);
+    modall.style.display = "block";
+    Span.addEventListener("click", () => {
+      modall.style.display = "none";
     });
   });
 });
