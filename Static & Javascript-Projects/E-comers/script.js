@@ -42,15 +42,21 @@ productids.forEach(async (productID) => {
 
     span.addEventListener("click", () => {
       modal.style.display = "none";
-    });
-  });
-  Cart.addEventListener("click", () => {
-    const cartlist = document.createElement("ul");
-    cartlist.innerHTML = `<li>${data.title}</li>`;
-    ProductTitle.appendChild(cartlist);
-    modall.style.display = "block";
-    Span.addEventListener("click", () => {
-      modall.style.display = "none";
+
+      Cart.addEventListener("click", () => {
+        const cartlist = document.createElement("ul");
+        cartlist.innerHTML = `<li>${data.title},${data.price}</li>`;
+        ProductTitle.appendChild(cartlist);
+        modall.style.display = "block";
+        Span.addEventListener("click", () => {
+          modall.style.display = "none";
+        });
+        window.onclick = function (e) {
+          if (e.target == modall) {
+            modall.style.display = "none";
+          }
+        };
+      });
     });
   });
 });
