@@ -1,34 +1,51 @@
 import { useState } from "react";
-import { json, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./Login.css";
 function LogIn() {
-  const [Email, setEmail] = useState("");
-  const [Password, setPassword] = useState("");
-  const [Message, setMessage] = useState();
+  const [Input, setInput] = useState({ Email: "", Password: "" });
+
   const Navigate = useNavigate();
-  const handleClick = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     const userData = JSON.parse(localStorage.getItem("user"));
-    if (Email === userData?.Email && Password === userData?.Password) {
-      setMessage = "successful";
+    if (
+      Input.Email === userData.Email &&
+      Input.Password === userData.Password
+    ) {
+      localStorage.setItem("Logdin", true);
+      Navigate("/fechproduct");
     } else {
-      setMessage = "invalid Input";
+      alert("invalid Input");
     }
   };
 
   return (
     <div className="formbody">
-      <form>
+      <form onSubmit={handleLogin}>
         <h2 className="heading">Log In</h2>
         <h4 className="lable">Email</h4>
-        <input type="email" placeholder="email" id="email" name="email"></input>
+        <input
+          type="email"
+          placeholder="email"
+          id="email"
+          name="Email"
+          value={Input.Email}
+          onChange={(e) =>
+            setInput({ ...Input, [e.target.name]: e.target.value })
+          }
+        ></input>
         <br></br>
         <h4 className="lable">Password</h4>
         <input
           type="password"
           placeholder="passward"
           id="passward"
-          name="passward"
+          name="Password"
+          value={Input.Password}
+          onChange={(e) =>
+            setInput({ ...Input, [e.target.name]: e.target.value })
+          }
         ></input>
         <br></br>
         <input type="submit" id="submit" name="submit"></input>

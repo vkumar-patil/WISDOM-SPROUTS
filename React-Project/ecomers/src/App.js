@@ -11,12 +11,11 @@ function App() {
       <Navbar></Navbar>
 
       <br />
-    {/* <Productdetail /> */}
 
       <Routes>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
-        
+        <Route path="/fechproduct" element={<Productdetail />}></Route>
       </Routes>
     </>
   );
