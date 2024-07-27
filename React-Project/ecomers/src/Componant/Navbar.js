@@ -1,4 +1,6 @@
 import logo from "../ascets/logo.jpg";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -40,11 +42,15 @@ function Navbar() {
                 Pricing
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">
-                Disabled
-              </a>
-            </li>
+
+            <Link to="/login">
+              <button className="btn btn-primary">LogIn</button>
+            </Link>
+
+            <Link to="/register">
+              <button className="btn btn-success ">Register</button>
+            </Link>
+            <Link to="/fechproduct"> product </Link>
           </ul>
         </div>
       </div>
