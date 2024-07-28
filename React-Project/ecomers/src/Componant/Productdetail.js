@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
+import "./Product.css";
 function Product() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -19,35 +20,35 @@ function Product() {
       });
   }, []);
   return (
-    <>
-      {data.map((item) => (
-        <div className="container">
-          <div className="card col-6">
-            <div className="row-1">
+    <div className="container">
+      <div className="row">
+        {data.map((item) => (
+          <div key={item.id} className="col-lg-3 text-center">
+            <Link to={`/Product/${item.id}`}>
               <img className="card-img-top" src={item.image} alt="Card  cap" />
-              <div className="card-body">
-                <h5 className="card-title">{item.title}</h5>
-                <p className="card-text">{item.description} </p>
-                <p>
-                  <span>
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    {item.price}
-                  </span>
-                  <span>
-                    <i className="fa-solid fa-star"></i>
-                    {item.rating.rate}
-                  </span>
-                </p>
-                <p>
-                  <button className="btn btn-primary">Add Cart</button>
-                  <butoon className="btn btn-success">Buy</butoon>
-                </p>
-              </div>
+            </Link>
+            <div className="card-body">
+              <h5 className="card-title">{item.title}</h5>
+              <p className="card-text">{item.descriptio} </p>
+              <p>
+                <span className="price">
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  {item.price}
+                </span>
+                <span className="rating">
+                  <i className="fa-solid fa-star"></i>
+                  {item.rating.rate}
+                </span>
+              </p>
+              <p>
+                <button className="btn btn-warning">Add Cart</button>
+                <butoon className="btn btn-success">Buy</butoon>
+              </p>
             </div>
           </div>
-        </div>
-      ))}
-    </>
+        ))}
+      </div>
+    </div>
   );
 }
 export default Product;

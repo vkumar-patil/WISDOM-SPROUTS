@@ -10,10 +10,11 @@ function Navbar() {
           width={30}
           height={30}
           className="d-inline-block aline-top"
+          alt="/"
         ></img>
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
+        <Link className="navbar-brand" to={"/"}>
+          V`Brand
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -28,29 +29,33 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a className="nav-link active" aria-current="page" href="/">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/">
                 Features
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/">
                 Pricing
               </a>
             </li>
-
-            <Link to="/login">
+            <input
+              type="search"
+              placeholder="Serch for product "
+              className="serch"
+            ></input>
+            <Link to="/Cart" style={{ marginLeft: 400 }} className="cart"><i class="fa-solid fa-cart-shopping" ></i> </Link>
+            <Link to="/login" >
               <button className="btn btn-primary">LogIn</button>
             </Link>
 
             <Link to="/register">
               <button className="btn btn-success ">Register</button>
             </Link>
-            <Link to="/fechproduct"> product </Link>
           </ul>
         </div>
       </div>

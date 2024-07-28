@@ -14,7 +14,7 @@ function LogIn() {
       Input.Password === userData.Password
     ) {
       localStorage.setItem("Logdin", true);
-      Navigate("/fechproduct");
+      Navigate("/Productdetail");
     } else {
       alert("invalid Input");
     }
