@@ -1,7 +1,7 @@
-import React, { useState, useEffect, startTransition } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Items } from "./Datas";
-import Productdetail from "./Productdetail";
+//import Productdetail from "./Productdetail";
 import "./Fechdata.css";
 const FechProduct = ({ cart, setCart }) => {
   // const addToCart = (id, price, title, description, image) => {
@@ -11,18 +11,18 @@ const FechProduct = ({ cart, setCart }) => {
   // };
   const { id } = useParams();
   const [product, setProduct] = useState({});
-  const [reletedProduct, setReletedproduct] = useState([]);
+  //const [reletedProduct, setReletedproduct] = useState([]);
   useEffect(() => {
     const filterproduct = Items.filter((product) => product.id == id);
     //console.log(filterproduct);
     setProduct(filterproduct[0]);
-    const reletedProduct = Items.filter((p) => p.category === product.category);
-    console.log(reletedProduct[0]);
-    setReletedproduct(reletedProduct);
-  }, [id, product.category]);
+    // const reletedProduct = Items.filter((p) => p.category === product.category);
+    //console.log(reletedProduct[0]);
+    // setReletedproduct(reletedProduct);
+  }, [id]);
 
   return (
-    <div className="container" style={{ display: "flex" }}>
+    <div className="container fechcontainer" style={{ display: "flex" }}>
       <div className="img">
         <img className="card-img-top" src={product.image} alt="Card  cap" />
       </div>
@@ -56,7 +56,7 @@ const FechProduct = ({ cart, setCart }) => {
           <butoon className="btn btn-success">Buy</butoon>
         </p>
       </div>
-      <Productdetail item={reletedProduct} />
+      {/* <Productdetail item={reletedProduct} /> */}
     </div>
   );
 };
