@@ -1,9 +1,12 @@
 import logo from "../ascets/logo.jpg";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-function Navbar() {
+import { FaAddressCard } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
+
+function Navbar({ Cart }) {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary" >
       <div className="container-fluid">
         <img
           src={logo}
@@ -48,8 +51,17 @@ function Navbar() {
               placeholder="Serch for product "
               className="serch"
             ></input>
-            <Link to="/Cart" style={{ marginLeft: 400 }} className="cart"><i class="fa-solid fa-cart-shopping" ></i> </Link>
-            <Link to="/login" >
+            <FaSearch />
+            <button type="button" class="btn btn-primary">
+              Profile
+              <FaAddressCard />
+              <span class="badge badge-light">{}</span>
+              <span class="sr-only">unread messages</span>
+            </button>
+            <Link to="/Cart" style={{ marginLeft: 350 }} className="cart">
+              <i class="fa-solid fa-cart-shopping"></i>{" "}
+            </Link>
+            <Link to="/login">
               <button className="btn btn-primary">LogIn</button>
             </Link>
 

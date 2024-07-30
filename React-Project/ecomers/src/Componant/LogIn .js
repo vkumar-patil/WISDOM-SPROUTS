@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+
+
+import "react-toastify/dist/ReactToastify.css";
 
 import "./Login.css";
+
 function LogIn() {
   const [Input, setInput] = useState({ Email: "", Password: "" });
 
@@ -13,18 +18,20 @@ function LogIn() {
       Input.Email === userData.Email &&
       Input.Password === userData.Password
     ) {
+      toast.success("login successful", { autoClose: 1000 });
       localStorage.setItem("Logdin", true);
+
       Navigate("/Productdetail");
     } else {
-      alert("invalid Input");
+      toast.error("login fail", { autoClose: 1500 });
     }
   };
 
   return (
-    <div className="formbody">
+    <div classNameName="formbody">
       <form onSubmit={handleLogin}>
-        <h2 className="heading">Log In</h2>
-        <h4 className="lable">Email</h4>
+        <h2 classNameName="heading">Log In</h2>
+        <h4 classNameName="lable">Email</h4>
         <input
           type="email"
           placeholder="email"
@@ -36,7 +43,7 @@ function LogIn() {
           }
         ></input>
         <br></br>
-        <h4 className="lable">Password</h4>
+        <h4 classNameName="lable">Password</h4>
         <input
           type="password"
           placeholder="passward"
@@ -50,6 +57,7 @@ function LogIn() {
         <br></br>
         <input type="submit" id="submit" name="submit"></input>
       </form>
+      <ToastContainer />
     </div>
   );
 }

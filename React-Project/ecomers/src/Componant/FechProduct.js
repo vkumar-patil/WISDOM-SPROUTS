@@ -1,38 +1,62 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, startTransition } from "react";
 import { useParams } from "react-router-dom";
-import { items } from "./Data";
-const FechProduct = () => {
+import { Items } from "./Datas";
+import Productdetail from "./Productdetail";
+import "./Fechdata.css";
+const FechProduct = ({ cart, setCart }) => {
+  // const addToCart = (id, price, title, description, image) => {
+  //   const obj = { id, price, title, description, image };
+  //   setCart([...cart, obj]);
+  //   console.log(cart);
+  // };
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  const [reletedProduct, setReletedproduct] = useState([]);
   useEffect(() => {
-    const filterproduct = items.filter((product) => product.id === id);
+    const filterproduct = Items.filter((product) => product.id == id);
+    //console.log(filterproduct);
     setProduct(filterproduct[0]);
-  }, [id]);
+    const reletedProduct = Items.filter((p) => p.category === product.category);
+    console.log(reletedProduct[0]);
+    setReletedproduct(reletedProduct);
+  }, [id, product.category]);
+
   return (
-    <div>
-      <div className="col-lg-3 text-center">
-        <div>
-          <img className="card-img-top" src={product.image} alt="Card  cap" />
-        </div>
-        <div className="card-body">
-          <h5 className="card-title">{product.title}</h5>
-          <p className="card-text">{product.descriptio} </p>
-          <p>
-            <span className="price">
-              <i class="fa-solid fa-indian-rupee-sign"></i>
-              {product.price}
-            </span>
-            <span className="rating">
-              <i className="fa-solid fa-star"></i>
-              {product.rating.rate}
-            </span>
-          </p>
-          <p>
-            <button className="btn btn-warning">Add Cart</button>
-            <butoon className="btn btn-success">Buy</butoon>
-          </p>
-        </div>
+    <div className="container" style={{ display: "flex" }}>
+      <div className="img">
+        <img className="card-img-top" src={product.image} alt="Card  cap" />
       </div>
+      <div className="detaildata">
+        <h4>{product.title}</h4>
+        <p>{product.description}</p>
+        <span>
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+          {product.price}
+        </span>
+        {/* <span>
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+          {product.rating}
+          console.log(type off (product))
+        </span> */}
+        <p>
+          <button
+            className="btn btn-warning"
+            // onClick={() =>
+            //   addToCart(
+            //     product.id,
+            //     product.price,
+            //     product.title,
+            //     product.description,
+            //     product.image
+            //   )
+            // }
+          >
+            Add Cart
+          </button>
+          <butoon className="btn btn-success">Buy</butoon>
+        </p>
+      </div>
+      <Productdetail item={reletedProduct} />
     </div>
   );
 };
