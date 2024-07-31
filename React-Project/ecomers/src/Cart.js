@@ -34,7 +34,7 @@ const Cart = ({ cart, setCart }) => {
         {cart.map((product) => {
           return (
             <>
-              <div className="card cartdiv mb-3 " style={{ width: "540px" }}>
+          <div className="card cartdiv mb-3 " style={{ width: "540px" }}>
                 <div className="row no-gutters">
                   <div className="col-md-4">
                     <img

@@ -32,6 +32,7 @@ function Product({ cart, setCart }) {
       <div className="container">
         <div className="row">
           {data.map((item) => (
+            
             <div key={item.id} className="col-md-6 col-lg-3 text-center">
               <Link to={`/Product/${item.id}`}>
                 <img
