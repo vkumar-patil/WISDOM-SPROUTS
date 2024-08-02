@@ -27,12 +27,12 @@ function Product({ cart, setCart }) {
         console.error("Error fetching data:", error);
       });
   }, []);
+
   return (
     <>
       <div className="container">
         <div className="row">
           {data.map((item) => (
-            
             <div key={item.id} className="col-md-6 col-lg-3 text-center">
               <Link to={`/Product/${item.id}`}>
                 <img
@@ -43,10 +43,9 @@ function Product({ cart, setCart }) {
               </Link>
               <div className="card-body">
                 <h5 className="card-title">{item.title}</h5>
-                <p className="card-text">{item.descriptio} </p>
-                <p>
+                 <p>
                   <span className="price">
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <i className="fa-solid fa-indian-rupee-sign"></i>
                     {item.price}
                   </span>
                   <span className="rating">

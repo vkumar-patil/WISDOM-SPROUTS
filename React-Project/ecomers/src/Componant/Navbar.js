@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FaAddressCard } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
-
 function Navbar({ Cart }) {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary" >
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <img
           src={logo}
@@ -52,14 +51,15 @@ function Navbar({ Cart }) {
               className="serch"
             ></input>
             <FaSearch />
-            <button type="button" class="btn btn-primary">
+            <button type="button" className="btn btn-primary">
               Profile
               <FaAddressCard />
-              <span class="badge badge-light">{}</span>
-              <span class="sr-only">unread messages</span>
+              <span className="badge badge-light">{}</span>
+              <span className="sr-only">unread messages</span>
             </button>
             <Link to="/Cart" style={{ marginLeft: 350 }} className="cart">
-              <i class="fa-solid fa-cart-shopping"></i>{" "}
+              <i className="fa-solid fa-cart-shopping"></i>
+              {""}
             </Link>
             <Link to="/login">
               <button className="btn btn-primary">LogIn</button>

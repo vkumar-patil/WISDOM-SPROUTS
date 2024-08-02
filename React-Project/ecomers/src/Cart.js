@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Cart.css";
+import { useParams } from "react-router-dom";
 
 const Cart = ({ cart, setCart }) => {
+  const { id } = useParams;
   return (
     <>
       <div className=" CretMain">
@@ -16,15 +18,12 @@ const Cart = ({ cart, setCart }) => {
             </div>
           ) : (
             <div className="  cartFinel">
-              <p>Product Count= 0</p>
+              <p>Product Count : {cart.length}</p>
               <p>
-                Total Price=<i class="fa-solid fa-indian-rupee-sign"></i>
+                Total Price=<i className="fa-solid fa-indian-rupee-sign"></i>
               </p>
               <button className="btn btn-warning">Check Out</button>
-              <button
-                onClick={() => (setCart = "")}
-                className="btn btn-warning"
-              >
+              <button onClick={() => setCart == ""} className="btn btn-warning">
                 Clear Cart
               </button>
             </div>
@@ -34,7 +33,7 @@ const Cart = ({ cart, setCart }) => {
         {cart.map((product) => {
           return (
             <>
-          <div className="card cartdiv mb-3 " style={{ width: "540px" }}>
+              <div className="card cartdiv mb-3 " style={{ width: "540px" }}>
                 <div className="row no-gutters">
                   <div className="col-md-4">
                     <img
@@ -50,7 +49,7 @@ const Cart = ({ cart, setCart }) => {
                       <p className="card-text">
                         <small className="text-muted">
                           <span className="price">
-                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <i className="fa-solid fa-indian-rupee-sign"></i>
                             {product.price}
                           </span>
                           <butoon className="btn btn-success">Buy</butoon>
