@@ -2,12 +2,15 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Bookdetail from "./Bookdetail";
 import Homepage from "./Homepage";
+import Navbar from "./Navbar";
+//import ProductRating from "./Star&reviw";
 function App() {
   return (
-    <>
-      <Homepage></Homepage>
+    <><Navbar/>
+      {/* <ProductRating></ProductRating> */}
       <Routes>
-        <Route path="/Bookdetail/:id" element={<Bookdetail />}></Route>
+        <Route path="/Bookdeta/:id" element={<Bookdetail />}></Route>
+        <Route path="/" element={<Homepage />}></Route>
       </Routes>
     </>
   );
