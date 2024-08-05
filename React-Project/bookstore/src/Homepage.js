@@ -7,12 +7,15 @@ import { useParams } from "react-router-dom";
 function Homepage() {
   const { id } = useParams();
   return (
-    <div className="container">
+    <div className="container" style={{ border: "black solid 1px " }}>
       <div className="row">
         {Bookdata.map((element) => (
           <div
             className="card card-col-4 "
-            style={{ width: "28rem", margin: "20px" }}
+            style={{
+              width: "28rem",
+              margin: "20px",
+            }}
           >
             <img
               src={Image}
