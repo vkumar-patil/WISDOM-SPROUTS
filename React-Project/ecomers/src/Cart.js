@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Cart.css";
 import { useParams } from "react-router-dom";
 
 const Cart = ({ cart, setCart }) => {
   const { id } = useParams;
+  const [Productprice, setProductprice] = useState(0);
+  useEffect(() => {
+    const totalprice = () => {
+      let total = 0;
+      cart.forEach((element) => {
+        total += element.price;
+      });
+      setProductprice(total);
+      
+    };
+    totalprice();
+  }, [cart]);
+
   return (
     <>
       <div className=" CretMain">
@@ -20,7 +33,9 @@ const Cart = ({ cart, setCart }) => {
             <div className="  cartFinel">
               <p>Product Count : {cart.length}</p>
               <p>
-                Total Price=<i className="fa-solid fa-indian-rupee-sign"></i>
+                Total Price=
+                <i className="fa-solid fa-indian-rupee-sign"></i>
+                {Productprice}
               </p>
               <button className="btn btn-warning">Check Out</button>
               <button onClick={() => setCart == ""} className="btn btn-warning">

@@ -7,36 +7,36 @@ import Productdetail from "./Componant/Productdetail";
 import Cart from "./Cart";
 import FechProduct from "./Componant/FechProduct";
 import SerchItem from "./Componant/SerchItem";
-import useContextt from "./Componant/Constext";
+//import useContextt from "./Componant/Constext";
 // import  {Items} from "./Componant/Datas";
 
 import { useState } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
 
   return (
     <>
-      <useContextt.provider value={user}>
-        <Navbar cart={Cart}></Navbar>
-        <Routes>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/register" element={<Register />}></Route>
-          <Route
-            path="/Cart"
-            element={<Cart cart={cart} setCart={setCart} />}
-          ></Route>
-          <Route path="/Serch/:term" element={<SerchItem />}></Route>
-          <Route path="/Product/:id" element={<FechProduct />}></Route>
-          <Route
-            path="/"
-            element={<Productdetail cart={cart} setCart={setCart} />}
-          ></Route>
+      {/* <useContextt.provider value={user}> */}
+      <Navbar cart={Cart}></Navbar>
+      <Routes>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route
+          path="/Cart"
+          element={<Cart cart={cart} setCart={setCart} />}
+        ></Route>
+        <Route path="/Serch/:term" element={<SerchItem />}></Route>
+        <Route path="/Product/:id" element={<FechProduct />}></Route>
+        <Route
+          path="/"
+          element={<Productdetail cart={cart} setCart={setCart} />}
+        ></Route>
 
-          <Route path="/Productdetail" element={<Productdetail />}></Route>
-        </Routes>
-      </useContextt.provider>
+        <Route path="/Productdetail" element={<Productdetail />}></Route>
+      </Routes>
+      {/* </useContextt.provider> */}
     </>
   );
 }
