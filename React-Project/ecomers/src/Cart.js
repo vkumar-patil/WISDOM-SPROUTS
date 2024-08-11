@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Cart.css";
-import { useParams } from "react-router-dom";
+//import { useParams } from "react-router-dom";
 
 const Cart = ({ cart, setCart }) => {
-  const { id } = useParams;
+  //const { id } = useParams;
   const [Productprice, setProductprice] = useState(0);
+  // const [Product, setproduct] = useState("");
   useEffect(() => {
     const totalprice = () => {
       let total = 0;
@@ -13,10 +14,13 @@ const Cart = ({ cart, setCart }) => {
         total += element.price;
       });
       setProductprice(total);
-      
     };
     totalprice();
   }, [cart]);
+  const handelClick = (id) => {
+    const updatecard = cart.filter((item) => item.id !== id);
+    setCart(updatecard);
+  };
 
   return (
     <>
@@ -38,7 +42,10 @@ const Cart = ({ cart, setCart }) => {
                 {Productprice}
               </p>
               <button className="btn btn-warning">Check Out</button>
-              <button onClick={() => setCart == ""} className="btn btn-warning">
+              <button
+                // onClick={handalClick}
+                className="btn btn-warning"
+              >
                 Clear Cart
               </button>
             </div>
@@ -67,7 +74,13 @@ const Cart = ({ cart, setCart }) => {
                             <i className="fa-solid fa-indian-rupee-sign"></i>
                             {product.price}
                           </span>
-                          <butoon className="btn btn-success">Buy</butoon>
+                          <button className="btn btn-success">Buy</button>
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => handelClick(product.id)}
+                          >
+                            Delete
+                          </button>
                         </small>
                       </p>
                     </div>

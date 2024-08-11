@@ -3,7 +3,17 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FaAddressCard } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
-function Navbar({ Cart }) {
+//import Cart from "../Cart";
+import {  useState } from "react";
+
+function Navbar({ cart }) {
+  const [card, setCard] = useState([]);
+  
+  // useEffect(() => {
+  // const cats=  Cart.filter((elem) =>(elem.length==Cart.length));
+  //   setCard(cats)
+  //   console.log(cats.length);
+  // }, []);
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -57,8 +67,17 @@ function Navbar({ Cart }) {
               <span className="badge badge-light">{}</span>
               <span className="sr-only">unread messages</span>
             </button>
+
             <Link to="/Cart" style={{ marginLeft: 350 }} className="cart">
-              <i className="fa-solid fa-cart-shopping"></i>
+              <button
+                type="button"
+                className="btn btn-primary position-relative"
+              >
+                <i className="fa-solid fa-cart-shopping"></i>
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {card.length} <span className="visually-hidden"></span>
+                </span>
+              </button>
               {""}
             </Link>
             <Link to="/login">

@@ -14,6 +14,7 @@ const Userlist = () => {
       })
       .then((data) => {
         setUserdata(data);
+        
         // console.log(data);
       })
       .catch((error) => {
