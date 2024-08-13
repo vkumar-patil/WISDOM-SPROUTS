@@ -1,26 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Cart.css";
+import ReducerComponant from "./useReducer/ReducerComponant";
 //import { useParams } from "react-router-dom";
 
 const Cart = ({ cart, setCart }) => {
   //const { id } = useParams;
   const [Productprice, setProductprice] = useState(0);
   // const [Product, setproduct] = useState("");
-  useEffect(() => {
-    const totalprice = () => {
-      let total = 0;
-      cart.forEach((element) => {
-        total += element.price;
-      });
-      setProductprice(total);
-    };
-    totalprice();
-  }, [cart]);
-  const handelClick = (id) => {
-    const updatecard = cart.filter((item) => item.id !== id);
-    setCart(updatecard);
-  };
+  // useEffect(() => {
+  //   const totalprice = () => {
+  //     let total = 0;
+  //     cart.forEach((element) => {
+  //       total += element.price;
+  //     });
+  //     setProductprice(total);
+  //   };
+  //   totalprice();
+  // }, [cart]);
+  // const handelClick = (id) => {
+  //   const updatecard = cart.reducer((item) => item.id !== id);
+  //   setCart(updatecard);
+  // };
 
   return (
     <>
@@ -39,7 +40,7 @@ const Cart = ({ cart, setCart }) => {
               <p>
                 Total Price=
                 <i className="fa-solid fa-indian-rupee-sign"></i>
-                {Productprice}
+                {ReducerComponant.productPrice}
               </p>
               <button className="btn btn-warning">Check Out</button>
               <button
