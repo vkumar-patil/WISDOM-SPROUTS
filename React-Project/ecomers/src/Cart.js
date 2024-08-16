@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useReducer } from "react";
 import { Link } from "react-router-dom";
 import "./Cart.css";
-import ReducerComponant from "./useReducer/ReducerComponant";
+import { initialstate, reducer } from "./useReducer/Reducer";
+//import ReducerComponant from "./useReducer/ReducerComponant";
+//import { useReducer } from "react"
+
 //import { useParams } from "react-router-dom";
 
 const Cart = ({ cart, setCart }) => {
   //const { id } = useParams;
-  const [Productprice, setProductprice] = useState(0);
+  //const [Productprice, setProductprice] = useState(0);
   // const [Product, setproduct] = useState("");
   // useEffect(() => {
   //   const totalprice = () => {
@@ -22,6 +25,10 @@ const Cart = ({ cart, setCart }) => {
   //   const updatecard = cart.reducer((item) => item.id !== id);
   //   setCart(updatecard);
   // };
+  const [productPrice, dispach] = useReducer(reducer, initialstate);
+  useEffect(() => {
+    dispach({ type: "UPDATE_TOTAL_PRICE", Cart });
+  }, [cart]);
 
   return (
     <>
@@ -38,9 +45,8 @@ const Cart = ({ cart, setCart }) => {
             <div className="  cartFinel">
               <p>Product Count : {cart.length}</p>
               <p>
-                Total Price=
+                Total Price:{productPrice}
                 <i className="fa-solid fa-indian-rupee-sign"></i>
-                {ReducerComponant.productPrice}
               </p>
               <button className="btn btn-warning">Check Out</button>
               <button
@@ -78,7 +84,7 @@ const Cart = ({ cart, setCart }) => {
                           <button className="btn btn-success">Buy</button>
                           <button
                             className="btn btn-danger"
-                            onClick={() => handelClick(product.id)}
+                            // onClick={() => handelClick(product.id)}
                           >
                             Delete
                           </button>

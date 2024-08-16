@@ -7,7 +7,9 @@ import Productdetail from "./Componant/Productdetail";
 import Cart from "./Cart";
 import FechProduct from "./Componant/FechProduct";
 import SerchItem from "./Componant/SerchItem";
-import ReducerComponant from "./useReducer/ReducerComponant";
+//import { initialstate, reduceras as Reducer} from "./useReducer/Reducer";
+//import ReducerComponant from "./useReducer/ReducerComponant";
+
 //import useContextt from "./Componant/Constext";
 // import  {Items} from "./Componant/Datas";
 
@@ -21,6 +23,7 @@ function App() {
     <>
       {/* <useConReducerComponanttextt.provider value={user}> */}
       <Navbar cart={Cart}></Navbar>
+      {/* <Reducer cart={Cart}></Reducer> */}
       {/* <ReducerComponant /> */}
       <Routes>
         <Route path="/login" element={<Login />}></Route>
