@@ -43,7 +43,7 @@ function Product({ cart, setCart }) {
               </Link>
               <div className="card-body">
                 <h5 className="card-title">{item.title}</h5>
-                 <p>
+                <p>
                   <span className="price">
                     <i className="fa-solid fa-indian-rupee-sign"></i>
                     {item.price}

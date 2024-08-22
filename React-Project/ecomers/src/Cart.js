@@ -1,30 +1,30 @@
 import React, { useEffect, useState, useReducer } from "react";
 import { Link } from "react-router-dom";
 import "./Cart.css";
-import { initialstate, reducer } from "./useReducer/Reducer";
+//import { initialstate, reducer } from "./useReducer/Reducer";
 //import ReducerComponant from "./useReducer/ReducerComponant";
 //import { useReducer } from "react"
 
-//import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Cart = ({ cart, setCart }) => {
-  //const { id } = useParams;
-  //const [Productprice, setProductprice] = useState(0);
-  // const [Product, setproduct] = useState("");
-  // useEffect(() => {
-  //   const totalprice = () => {
-  //     let total = 0;
-  //     cart.forEach((element) => {
-  //       total += element.price;
-  //     });
-  //     setProductprice(total);
-  //   };
-  //   totalprice();
-  // }, [cart]);
-  // const handelClick = (id) => {
-  //   const updatecard = cart.reducer((item) => item.id !== id);
-  //   setCart(updatecard);
-  // };
+  const { id } = useParams;
+  const [Productprice, setProductprice] = useState(0);
+  const [Product, setproduct] = useState("");
+  useEffect(() => {
+    const totalprice = () => {
+      let total = 0;
+      cart.forEach((element) => {
+        total += element.price;
+      });
+      setProductprice(total);
+    };
+    totalprice();
+  }, [cart]);
+  const handelClick = (index) => {
+    const updatecard = cart.filter((Index) => Index !== index);
+    setCart(updatecard);
+  };
   const [productPrice, dispach] = useReducer(reducer, initialstate);
   useEffect(() => {
     dispach({ type: "UPDATE_TOTAL_PRICE", Cart });
@@ -50,7 +50,7 @@ const Cart = ({ cart, setCart }) => {
               </p>
               <button className="btn btn-warning">Check Out</button>
               <button
-                // onClick={handalClick}
+                 //onClick={handalClick}
                 className="btn btn-warning"
               >
                 Clear Cart
@@ -84,7 +84,7 @@ const Cart = ({ cart, setCart }) => {
                           <button className="btn btn-success">Buy</button>
                           <button
                             className="btn btn-danger"
-                            // onClick={() => handelClick(product.id)}
+                            onClick={() => handelClick(cart.index)}
                           >
                             Delete
                           </button>
