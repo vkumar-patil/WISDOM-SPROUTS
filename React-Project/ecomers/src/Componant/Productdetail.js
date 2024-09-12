@@ -3,14 +3,25 @@ import { Link } from "react-router-dom";
 import "./Product.css";
 
 import "react-toastify/dist/ReactToastify.css";
-function Product({ cart, setCart }) {
+function Product({ cart, setCart, serchproduct }) {
   const addToCart = (id, price, title, description, image) => {
     const obj = { id, price, title, description, image };
-    setCart([...cart, obj]);
-    console.log(cart);
+    if (cart.find((ele) => ele.id === id)) {
+      alert(`${title} Alredy aded in cart`);
+    } else {
+      setCart([...cart, obj]);
+      console.log(cart);
+      window.confirm("Product Add To Cart");
+    }
   };
   const [data, setData] = useState([]);
-
+  const filteredProducts = data.filter((product) => {
+    console.log(product.title);
+    return (
+      product.title &&
+      String(product.title).toLowerCase().includes(serchproduct.toLowerCase())
+    );
+  });
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products?limit=20`)
       .then((response) => {
@@ -32,8 +43,8 @@ function Product({ cart, setCart }) {
     <>
       <div className="container">
         <div className="row">
-          {data.map((item) => (
-            <div key={item.id} className="col-md-6 col-lg-3 text-center">
+          {filteredProducts.map((item) => (
+            <div className="col-md-6 col-lg-3 text-center">
               <Link to={`/Product/${item.id}`}>
                 <img
                   className="card-img-top"
@@ -50,7 +61,6 @@ function Product({ cart, setCart }) {
                   </span>
                   <span className="rating">
                     <i className="fa-solid fa-star"></i>
-                    {item.rating.rate}
                   </span>
                 </p>
                 <p>
