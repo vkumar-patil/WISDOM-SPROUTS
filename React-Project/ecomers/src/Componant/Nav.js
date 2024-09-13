@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 import { HiShoppingCart } from "react-icons/hi";
 //import Cart from "../Cart";
 function Nav({ cart, serchproduct, setSerchproduct }) {
+  const itemCount = cart ? cart.length : 0; // Safe check
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="/">
-          FSTORE
-        </a>
+        <span className="navbar-brand">FSTORE</span>
         <button
           className="navbar-toggler"
           type="button"
@@ -31,7 +30,9 @@ function Nav({ cart, serchproduct, setSerchproduct }) {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link disabled" href="/">Disabled</a>
+              <a className="nav-link disabled" href="/">
+                Disabled
+              </a>
             </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">
@@ -45,7 +46,7 @@ function Nav({ cart, serchproduct, setSerchproduct }) {
             />
             <span>
               <span class="badge badge-light position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                {cart.length}
+                {itemCount}
               </span>
               <span class="sr-only">unread messages</span>
               <Link

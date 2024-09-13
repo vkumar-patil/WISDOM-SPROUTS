@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Productdetail from "./Componant/Productdetail";
 import Cart from "./Cart";
 import FechProduct from "./Componant/FechProduct";
-import SerchItem from "./Componant/SerchItem";
+//import SerchItem from "./Componant/SerchItem";
 import Nav from "./Componant/Nav";
 import { useState } from "react";
 function App() {
@@ -26,7 +26,6 @@ function App() {
           path="/Cart"
           element={<Cart cart={cart} setCart={setCart} />}
         ></Route>
-        <Route path="/Serch/:term" element={<SerchItem />}></Route>
         <Route
           path="/Product/:id"
           element={<FechProduct cart={cart} setCart={setCart} />}

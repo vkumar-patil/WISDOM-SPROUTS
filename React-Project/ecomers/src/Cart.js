@@ -5,20 +5,20 @@ import "./Cart.css";
 const Cart = ({ cart, setCart }) => {
   const [Productprice, setProductprice] = useState(0);
   //const [count, setcount] = useState(0);
-  const handleIncrement = (id) => {
-    const updatedCart = cart.map((product) =>
-      product.id === id
-        ? { ...product, quantity: product.quantity + 1 }
-        : product
-    );
-    setCart(updatedCart);
-  };
-  const handleDecreement = (id) => {};
+  // const handleIncrement = (id) => {
+  //   const updatedCart = cart.map((product) =>
+  //     product.id === id
+  //       ? { ...product, quantity: product.quantity + 1 }
+  //       : product
+  //   );
+  //   setCart(updatedCart);
+  // };
+  //const handleDecreement = (id) => {};
   useEffect(() => {
     const totalprice = () => {
       let total = 0;
       cart.forEach((element) => {
-        total += element.price * element.quantity;
+        total += element.price;
       });
       setProductprice(total.toFixed(2));
     };
@@ -46,7 +46,11 @@ const Cart = ({ cart, setCart }) => {
             ) : (
               <div className="col col-md-4  cartFinel">
                 <p>Product Count : {cart.length}</p>
-                <p>Product Count: {cart.reduce((acc, item) => acc + item.quantity, 0)}</p> {/* Display total quantity */}
+                {/* <p>
+                  Product Count:{" "}
+                  {cart.reduce((acc, item) => acc + item.quantity, 0)}
+                </p>{" "} */}
+                {/* Display total quantity */}
                 <p>
                   Total Price:<i className="fa-solid fa-indian-rupee-sign"></i>
                   {Productprice}
@@ -91,7 +95,7 @@ const Cart = ({ cart, setCart }) => {
                             >
                               Delete
                             </button>
-                            <button
+                            {/* <button
                               onClick={() => handleDecreement(product.id)}
                             >
                               -
@@ -99,7 +103,7 @@ const Cart = ({ cart, setCart }) => {
                             {product.quantity}
                             <button onClick={() => handleIncrement(product.id)}>
                               +
-                            </button>
+                            </button> */}
                           </small>
                         </p>
                       </div>

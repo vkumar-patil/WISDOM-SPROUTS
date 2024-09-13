@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 
-
 import "react-toastify/dist/ReactToastify.css";
 
 import "./Login.css";
@@ -28,9 +27,20 @@ function LogIn() {
   };
 
   return (
-    <div classNameName="formbody">
-      <form onSubmit={handleLogin}>
-        <h2 classNameName="heading">Log In</h2>
+    <div className="Container" style={{ position: "relative" }}>
+      <form
+        onSubmit={handleLogin}
+        style={{
+          backgroundColor: "Highlight",
+          width: "40%",
+          textAlign: "center",
+          position: "absolute",
+          top: "30%",
+          left: "30%",
+          borderRadius: "20%",
+        }}
+      >
+        <h3 classNameName="heading">Log In</h3>
         <h4 classNameName="lable">Email</h4>
         <input
           type="email"

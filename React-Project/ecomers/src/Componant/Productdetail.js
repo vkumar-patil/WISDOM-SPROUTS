@@ -16,7 +16,7 @@ function Product({ cart, setCart, serchproduct }) {
   };
   const [data, setData] = useState([]);
   const filteredProducts = data.filter((product) => {
-    console.log(product.title);
+    //console.log(product.title);
     return (
       product.title &&
       String(product.title).toLowerCase().includes(serchproduct.toLowerCase())
@@ -32,7 +32,7 @@ function Product({ cart, setCart, serchproduct }) {
       })
       .then((data) => {
         setData(data);
-        console.log(data);
+        //console.log(data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -44,7 +44,7 @@ function Product({ cart, setCart, serchproduct }) {
       <div className="container">
         <div className="row">
           {filteredProducts.map((item) => (
-            <div className="col-md-6 col-lg-3 text-center">
+            <div className="col-md-6 col-lg-3 text-center" key={item.id}>
               <Link to={`/Product/${item.id}`}>
                 <img
                   className="card-img-top"
